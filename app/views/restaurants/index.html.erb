@@ -1,9 +1,13 @@
-<h1>All Restaurants</h1>
+<div class="container">
+  <div class="card">
+    <h1>All Restaurants</h1>
 
-<ol><% @restaurants.each do |restaurant| %>
-<li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-<% end %>
-</ol>
+    <ol><% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <% end %>
+    </ol>
 
 
-<%= link_to 'Add a restaurant', new_restaurant_path %>
+    <%= link_to 'Add a restaurant', new_restaurant_path, class: "btn btn-primary"%>
+  </div>
+</div>
